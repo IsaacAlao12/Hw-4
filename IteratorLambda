@@ -1,0 +1,68 @@
+import java.util.*;
+
+public class IteratorLambdaMethods {
+
+    //Method 1
+    public static void Strings(ArrayList<String> list) {
+        Iterator<String> it = list.iterator();
+        it.forEachRemaining(s -> System.out.println(s));
+    }
+
+    //Method 2
+    public static void Uppercase(ArrayList<String> list) {
+        Iterator<String> it = list.iterator();
+        it.forEachRemaining(s -> System.out.println(s.toUpperCase()));
+    }
+
+    //Method 3
+    public static void Numbers(ArrayList<Integer> list) {
+        Iterator<Integer> it = list.iterator();
+        it.forEachRemaining(n -> System.out.println(n));
+    }
+
+    //Method 4
+    public static void Doubles(ArrayList<Integer> list) {
+        Iterator<Integer> it = list.iterator();
+        it.forEachRemaining(n -> System.out.println(n * 2));
+    }
+
+    //Method 5
+    public static void StringLengths(ArrayList<String> list) {
+        Iterator<String> it = list.iterator();
+        it.forEachRemaining(s -> System.out.println(s.length()));
+    }
+
+    //Method 6
+    public static void removeShortWords(ArrayList<String> list) {
+        Iterator<String> it = list.iterator();
+        list.removeIf(word -> word.length() < 4);
+    }
+
+    //Method 7
+    public static void EvenNumbers(ArrayList<Integer> list) {
+        Iterator<Integer> it = list.iterator();
+        it.forEachRemaining(n -> {
+            if (n % 2 == 0) System.out.println(n);
+        });
+    }
+
+    //Method 8
+    public static void OddNumbers(ArrayList<Integer> list) {
+        Iterator<Integer> it = list.iterator();
+        it.forEachRemaining(n -> {
+            if (n % 2 != 0) System.out.println(n);
+        });
+    }
+
+    //Method 9
+    public static void FirstLetter(ArrayList<String> list) {
+        Iterator<String> it = list.iterator();
+        it.forEachRemaining(s -> System.out.println(s.charAt(0)));
+    }
+
+    //Method 10
+    public static void Squared(ArrayList<Integer> list) {
+        Iterator<Integer> it = list.iterator();
+        it.forEachRemaining(n -> System.out.println(n * n));
+    }
+}
